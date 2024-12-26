@@ -28,7 +28,7 @@ const feedbackFormEl = document.querySelector('.feedback-form');
 const onFeedbackFormElInput = event => {
   const { value, name } = event.target;
 
-  formData[name] = value;
+  formData[name] = value.trim();
 
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 };
