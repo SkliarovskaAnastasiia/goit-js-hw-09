@@ -2,5 +2,5 @@ import"./assets/modulepreload-polyfill-B5Qt9EMX.js";/* empty css                
 	<a class="gallery-link" href="${o}">
 	 <img class="gallery-image" src="${p}" alt="${a}"/>
 	</a>
-</li>`,n=t.map(p=>e(p)).join(""),c=document.querySelector(".gallery");c.insertAdjacentHTML("beforeend",n);new i(".gallery a",{captions:!0,captionsData:"alt",captionDelay:250});
+</li>`,n=t.map(p=>e(p)).join(""),c=document.querySelector(".gallery");c.insertAdjacentHTML("beforeend",n);new i(".js-gallery a",{captions:!0,captionsData:"alt",captionDelay:250});
 //# sourceMappingURL=1-gallery.js.map
