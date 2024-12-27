@@ -6,23 +6,22 @@ let formData = {
 const feedbackFormEl = document.querySelector('.feedback-form');
 
 (() => {
-  if (localStorage.length !== 0) {
-    try {
-      const storageData = JSON.parse(
-        localStorage.getItem('feedback-form-state')
-      );
+  try {
+    const storageData = JSON.parse(localStorage.getItem('feedback-form-state'));
 
-      formData = storageData;
-
-      for (const key in storageData) {
-        feedbackFormEl.elements[key].value = storageData[key];
-      }
-    } catch (error) {
-      console.log(error);
+    if (storageData === null) {
+      return;
     }
-  }
 
-  return;
+    formData = storageData;
+    console.log(formData);
+
+    for (const key in storageData) {
+      feedbackFormEl.elements[key].value = storageData[key];
+    }
+  } catch (error) {
+    console.log(error);
+  }
 })();
 
 const onFeedbackFormElInput = event => {
